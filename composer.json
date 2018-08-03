@@ -22,5 +22,10 @@
     "quiqqer/sitetypes": "1.*|dev-master|dev-dev",
     "tabler/tabler": "*",
     "npm-asset/fastclick": "1.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "QUI\\Tabler\\": "src\/QUI\/Tabler"
+    }
   }
 }

@@ -33,5 +33,99 @@
                 </categories>
             </window>
         </settings>
+
+        <wysiwyg class="page-content">
+            <css src="URL_OPT_DIR/quiqqer/template-tabler/bin/css/style.css"/>
+            <css src="URL_OPT_DIR/quiqqer/template-tabler/bin/css/dashboard.css.php"/>
+
+            <styles>
+                <!-- alerts / messages -->
+                <style element="div">
+                    <locale group="quiqqer/template-tabler" var="template.message.alert"/>
+                    <attributes>
+                        <attribute name="class">alert alert-primary</attribute>
+                    </attributes>
+                </style>
+
+                <style element="div">
+                    <locale group="quiqqer/template-tabler" var="template.message.secondary"/>
+                    <attributes>
+                        <attribute name="class">alert alert-secondary</attribute>
+                    </attributes>
+                </style>
+
+                <style element="div">
+                    <locale group="quiqqer/template-tabler" var="template.message.success"/>
+                    <attributes>
+                        <attribute name="class">alert alert-success</attribute>
+                    </attributes>
+                </style>
+
+                <style element="div">
+                    <locale group="quiqqer/template-tabler" var="template.message.info"/>
+                    <attributes>
+                        <attribute name="class">alert alert-info</attribute>
+                    </attributes>
+                </style>
+
+                <style element="div">
+                    <locale group="quiqqer/template-tabler" var="template.message.warning"/>
+                    <attributes>
+                        <attribute name="class">alert alert-warning</attribute>
+                    </attributes>
+                </style>
+
+                <style element="div">
+                    <locale group="quiqqer/template-tabler" var="template.message.danger"/>
+                    <attributes>
+                        <attribute name="class">alert alert-danger</attribute>
+                    </attributes>
+                </style>
+
+                <!-- buttons -->
+                <style element="a,button">
+                    <locale group="quiqqer/template-tabler" var="template.button.primary"/>
+                    <attributes>
+                        <attribute name="class">btn btn-primary</attribute>
+                    </attributes>
+                </style>
+
+                <style element="a,button">
+                    <locale group="quiqqer/template-tabler" var="template.button.secondary"/>
+                    <attributes>
+                        <attribute name="class">btn btn-secondary</attribute>
+                    </attributes>
+                </style>
+
+                <style element="a,button">
+                    <locale group="quiqqer/template-tabler" var="template.button.info"/>
+                    <attributes>
+                        <attribute name="class">btn btn-info</attribute>
+                    </attributes>
+                </style>
+
+                <style element="a,button">
+                    <locale group="quiqqer/template-tabler" var="template.button.warning"/>
+                    <attributes>
+                        <attribute name="class">btn btn-warning</attribute>
+                    </attributes>
+                </style>
+
+                <style element="a,button">
+                    <locale group="quiqqer/template-tabler" var="template.button.danger"/>
+                    <attributes>
+                        <attribute name="class">btn btn-danger</attribute>
+                    </attributes>
+                </style>
+
+                <style element="a,button">
+                    <locale group="quiqqer/template-tabler" var="template.button.link"/>
+                    <attributes>
+                        <attribute name="class">btn btn-link</attribute>
+                    </attributes>
+                </style>
+
+            </styles>
+        </wysiwyg>
     </project>
 </quiqqer>

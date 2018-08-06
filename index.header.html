@@ -1,0 +1,53 @@
+<div class="header py-4">
+    <div class="container">
+        <div class="d-flex">
+            <!-- logo -->
+            <a class="header-brand" href="/">
+                {if $Logo}
+                {image image=$Logo}
+                {/if}
+            </a>
+
+            <!--<a href="#" class="header-toggler d-lg-none order-lg-2 ml-auto collapsed"-->
+            <!--data-toggle="collapse"-->
+            <!--data-target="#headerMenuCollapse"-->
+            <!--aria-expanded="false"-->
+            <!--&gt;-->
+            <!--<span class="header-toggler-icon"></span>-->
+            <!--</a>-->
+
+
+            <!-- login -->
+            <div class="d-flex order-lg-2 ml-auto">
+                <div class="dropdown">
+                    <a href="#" class="nav-link pr-0 leading-none header-profile" data-toggle="dropdown"
+                       aria-expanded="false">
+                        <span class="avatar" style="background-image: url('{$avatar}')"></span>
+                        <span class="ml-2 d-none d-lg-block">
+                            <span class="text-default">
+                                {$User->getName()}
+                            </span>
+                            {if $User->getName() != $User->getUsername()}
+                            <small class="text-muted d-block mt-1">
+                                {$User->getUsername()}
+                            </small>
+                            {/if}
+                        </span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow" x-placement="bottom-end"
+                         style="position: absolute; transform: translate3d(-56px, 32px, 0px); top: 0; left: 0; will-change: transform;">
+                        <a class="dropdown-item" href="#">
+                            <i class="dropdown-icon fe fe-user"></i> Profile
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="dropdown-icon fe fe-settings"></i> Settings
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="dropdown-icon fe fe-log-out"></i> Sign out
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

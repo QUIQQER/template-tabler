@@ -6,7 +6,7 @@
                     <div class="input-icon">
                         <input type="search"
                                class="form-control header-search"
-                               placeholder="Search @steemit-username..."
+                               placeholder="Search..."
                                tabindex="1"
                                name="user"
                                value=""
@@ -20,7 +20,7 @@
                 </form>
             </div>
 
-            <div class="col-lg order-lg-first">
+            <nav class="col-lg order-lg-first">
                 {assign var=navigation value=$Start->getNavigation()}
                 <ul class="nav nav-tabs border-0 flex-column flex-lg-row">
                     <li class="nav-item">
@@ -30,11 +30,11 @@
                     </li>
                     {foreach $navigation as $Child}
                     <li class="nav-item">
-                        <a href="javascript:void(0)"
-                           class="nav-link"
-                           data-toggle="dropdown"
-                           data-href="{url site=$Child}"
-                        >
+                        {if $Child->hasChildren()}
+                        <a href="{url site=$Child}" class="nav-link" data-toggle="dropdown">
+                        {else}
+                        <a href="{url site=$Child}" class="nav-link">
+                        {/if}
                             {$Child->getAttribute('title')}
                         </a>
 
@@ -50,28 +50,8 @@
                         {/if}
                     </li>
                     {/foreach}
-
-                    <!--<li class="nav-item">-->
-                    <!--<a href="javascript:void(0)"-->
-                    <!--class="nav-link"-->
-                    <!--data-toggle="dropdown"-->
-                    <!--&gt;-->
-                    <!--<i class="fe fe-user"></i> User-->
-                    <!--</a>-->
-
-                    <!--<div class="dropdown-menu dropdown-menu-arrow">-->
-                    <!--<a href="?user=<?php echo $user; ?>&c=general" class="dropdown-item ">General</a>-->
-                    <!--<a href="?user=<?php echo $user; ?>&c=transfers" class="dropdown-item ">Transfers</a>-->
-                    <!--<a href="?user=<?php echo $user; ?>&c=bots" class="dropdown-item ">Bot usage</a>-->
-                    <!--</div>-->
-                    <!--</li>-->
-                    <!--<li class="nav-item">-->
-                    <!--<a href="/?about" class="nav-link<?php if ($page === 'about') { ?> active<?php }; ?>">-->
-                    <!--<i class="fa fa-coffee"></i> About-->
-                    <!--</a>-->
-                    <!--</li>-->
                 </ul>
-            </div>
+            </nav>
         </div>
     </div>
 </div>

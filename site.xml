@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+
+    <!-- layouts -->
+    <layouts>
+        <layout type="layout/noSidebar"
+                image="bin/layouts/noSidebar.png">
+            <title>
+                <locale group="quiqqer/template-tabler" var="admin.layout.noSidebar"/>
+            </title>
+            <description>
+                <locale group="quiqqer/template-tabler" var="admin.layout.noSidebar.desc"/>
+            </description>
+        </layout>
+
+        <layout type="layout/leftSidebar"
+                image="bin/layouts/leftSidebar.png">
+            <title>
+                <locale group="quiqqer/template-tabler" var="admin.layout.leftSidebar"/>
+            </title>
+            <description>
+                <locale group="quiqqer/template-tabler" var="admin.layout.leftSidebar.desc"/>
+            </description>
+        </layout>
+
+        <layout type="layout/rightSidebar"
+                image="bin/layouts/rightSidebar.png">
+            <title>
+                <locale group="quiqqer/template-tabler" var="admin.layout.rightSidebar"/>
+            </title>
+            <description>
+                <locale group="quiqqer/template-tabler" var="admin.layout.rightSidebar.desc"/>
+            </description>
+        </layout>
+    </layouts>
+
+</site>

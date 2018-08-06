@@ -5,7 +5,6 @@
 
     {$Template->getHeader()}
 
-
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
           integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
           crossorigin="anonymous"
@@ -22,31 +21,14 @@
 </head>
 <body class="{$bodyClass} page-{$Site->getId()}" id="body-top">
 
-
 <div class="page">
     <div class="page-main">
-        <div class="header py-4">
-            <div class="container">
-                <div class="d-flex">
-                    <a class="header-brand" href="/">
-                        <img src="/bin/images/jediholmshenwatson-logo.png" class="header-brand-img" alt="tabler logo">
-                    </a>
 
-                    <a href="#" class="header-toggler d-lg-none order-lg-2 ml-auto collapsed"
-                       data-toggle="collapse"
-                       data-target="#headerMenuCollapse"
-                       aria-expanded="false"
-                    >
-                        <span class="header-toggler-icon"></span>
-                    </a>
-                </div>
-            </div>
-        </div>
+        {$templateHeader}
+        {$templateMenu}
 
-        {include file=$templateMenu}
-
-        <main>
-
+        <main class="container">
+            {$Template->getLayout()}
         </main>
     </div>
 

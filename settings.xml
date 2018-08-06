@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiqqer>
+    <project>
+
+        <settings>
+            <config>
+                <section name="templateTabler.settings">
+                    <conf name="showSearch">
+                        <type><![CDATA[bool]]></type>
+                        <defaultvalue>1</defaultvalue>
+                    </conf>
+                    <conf name="showLogin">
+                        <type><![CDATA[bool]]></type>
+                        <defaultvalue>1</defaultvalue>
+                    </conf>
+
+
+                </section>
+            </config>
+
+
+            <window>
+                <categories>
+                    <category name="templateTabler">
+                        <text>
+                            <locale group="quiqqer/template-tabler"
+                                    var="templateTabler.settings.menu.title"
+                            />
+                        </text>
+                        <icon>fa fa-</icon>
+
+                    </category>
+                </categories>
+            </window>
+        </settings>
+    </project>
+</quiqqer>

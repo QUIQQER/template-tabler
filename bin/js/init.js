@@ -54,4 +54,34 @@ require(['MooTools'], function () {
     if (Profile) {
         Profile.addEvent('click', workaroundClickForMenus);
     }
+
+    // sign out
+    var Logout = document.getElement('.header-profile-menu .logout');
+    var Login  = document.getElement('.header-profile-login');
+
+    if (Logout) {
+        Logout.addEvent('click', function (event) {
+            event.stop();
+
+            require(['controls/users/LogoutWindow'], function (Logout) {
+                new Logout().open();
+            });
+        });
+    }
+
+    if (Login) {
+        Login.addEvent('click', function (event) {
+            event.stop();
+
+            require(['controls/users/LoginWindow'], function (LoginWindow) {
+                new LoginWindow({
+                    events: {
+                        onLoad: function () {
+                            console.log(123);
+                        }
+                    }
+                }).open();
+            });
+        });
+    }
 });

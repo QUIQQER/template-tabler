@@ -1,3 +1,47 @@
 main.container {
     margin-top: 20px;
 }
+
+.header-profile-login {
+    height: 40px;
+}
+
+.qui-window-popup {
+    border: 1px solid rgba(0, 40, 100, 0.12);
+    border-radius: 3px;
+}
+
+input {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 40, 100, 0.12);
+    border-radius: 3px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+input:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #1991eb;
+    outline: 0;
+    box-shadow: 0 0 0 2px rgba(70, 127, 207, 0.25);
+}
+
+.quiqqer-auth-login-container label span {
+    font-size: 13px;
+}
+
+.quiqqer-auth-login-container [type="submit"] {
+    display: block;
+    float: none;
+    margin: 0 auto;
+    width: 160px;
+}
+
+

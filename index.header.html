@@ -19,6 +19,7 @@
 
             <!-- login -->
             <div class="d-flex order-lg-2 ml-auto">
+                {if $User->getId()}
                 <div class="dropdown">
                     <a href="#" class="nav-link pr-0 leading-none header-profile" data-toggle="dropdown"
                        aria-expanded="false">
@@ -34,7 +35,7 @@
                             {/if}
                         </span>
                     </a>
-                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow" x-placement="bottom-end"
+                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow header-profile-menu" x-placement="bottom-end"
                          style="position: absolute; transform: translate3d(-56px, 32px, 0px); top: 0; left: 0; will-change: transform;">
                         <a class="dropdown-item" href="#">
                             <i class="dropdown-icon fe fe-user"></i> Profile
@@ -42,11 +43,16 @@
                         <a class="dropdown-item" href="#">
                             <i class="dropdown-icon fe fe-settings"></i> Settings
                         </a>
-                        <a class="dropdown-item" href="#">
+                        <a class="dropdown-item logout" href="#">
                             <i class="dropdown-icon fe fe-log-out"></i> Sign out
                         </a>
                     </div>
                 </div>
+                {else}
+                <button class="header-profile-login btn btn-outline-primary">
+                    <i class="fe fe-log-in mr-2"></i> Login
+                </button>
+                {/if}
             </div>
         </div>
     </div>

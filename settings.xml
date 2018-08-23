@@ -9,12 +9,14 @@
                         <type><![CDATA[bool]]></type>
                         <defaultvalue>1</defaultvalue>
                     </conf>
-                    <conf name="showLogin">
+                    <conf name="showProfile">
                         <type><![CDATA[bool]]></type>
                         <defaultvalue>1</defaultvalue>
                     </conf>
-
-
+                    <conf name="showBreadcrumb">
+                        <type><![CDATA[bool]]></type>
+                        <defaultvalue>1</defaultvalue>
+                    </conf>
                 </section>
             </config>
 
@@ -23,12 +25,37 @@
                 <categories>
                     <category name="templateTabler">
                         <text>
-                            <locale group="quiqqer/template-tabler"
-                                    var="templateTabler.settings.menu.title"
+                            <locale group="quiqqer/template-tabler" var="templateTabler.settings.menu.title"
                             />
                         </text>
-                        <icon>fa fa-</icon>
+                        <icon>fa fa-file</icon>
 
+                        <settings title="templateTabler.settings">
+                            <title>
+                                <locale group="quiqqer/template-tabler" var="templateTabler.settings.title"
+                                />
+                            </title>
+
+                            <input conf="templateTabler.settings.showSearch" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/template-tabler" var="showSearch.text"
+                                    />
+                                </text>
+                            </input>
+                            <input conf="templateTabler.settings.showProfile" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/template-tabler" var="showProfile.text"
+                                    />
+                                </text>
+                            </input>
+                            <input conf="templateTabler.settings.showBreadcrumb" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/template-tabler" var="showBreadcrumb.text"
+                                    />
+                                </text>
+                            </input>
+
+                        </settings>
                     </category>
                 </categories>
             </window>

@@ -2,16 +2,16 @@
 {assign var=prefixContentBricks value=$BricksManager->getBricksByArea('prefixContentBricks', $Site)}
 {assign var=suffixContentBricks value=$BricksManager->getBricksByArea('suffixContentBricks', $Site)}
 
-{if !$showHeader}
+{if $showPageHeader}
 <header class="page-header">
     {if $showPageTitle}
     <h1 class="page-title">
-        Documentation
+        {$Site->getAttribute('title')}
     </h1>
     {/if}
 
     {if $showPageShort}
-    <div class="content-short" itemprop="description">
+    <div class="content-short row col-12" itemprop="description">
         {$Site->getAttribute('short')|nl2br}
     </div>
     {/if}

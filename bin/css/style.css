@@ -2,6 +2,11 @@ main.container {
     margin-top: 20px;
 }
 
+.container-breadcrumb {
+    background: rgba(0, 0, 0, 0.02);
+    padding-top: 5px;
+}
+
 .header-profile-login {
     height: 40px;
 }

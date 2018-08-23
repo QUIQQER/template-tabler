@@ -1,6 +1,7 @@
 <div class="header collapse d-lg-flex p-0" id="headerMenuCollapse">
     <div class="container">
         <div class="row align-items-center">
+            {if $showSearch}
             <div class="col-lg-3 ml-auto">
                 <form class="my-3 my-lg-0">
                     <div class="input-icon">
@@ -19,6 +20,7 @@
                     <input type="hidden" name="c" value=""/>
                 </form>
             </div>
+            {/if}
 
             <nav class="col-lg order-lg-first">
                 {assign var=navigation value=$Start->getNavigation()}
@@ -35,6 +37,7 @@
                         {else}
                         <a href="{url site=$Child}" class="nav-link">
                         {/if}
+                            {if $Child->getAttribute('image_site')}<i class="{$Child->getAttribute('image_site')}"></i>{/if}
                             {$Child->getAttribute('title')}
                         </a>
 

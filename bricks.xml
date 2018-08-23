@@ -2,6 +2,61 @@
 <quiqqer>
     <bricks>
 
+        <!-- promo slider wallpaper 2 content -->
+        <brick control="\QUI\Tabler\Bricks\Card">
+            <title>
+                <locale group="quiqqer/bricks" var="brick.control.slider.title"/>
+            </title>
+            <description>
+                <locale group="quiqqer/bricks" var="brick.control.slider.description"/>
+            </description>
+
+            <settings>
+                <setting name="cardColWidth" type="select">
+                    <locale group="quiqqer/template-tabler" var="cardColWidth"/>
+
+                    <option value=""/>
+                    <option value="col-4">
+                        <locale group="quiqqer/template-tabler" var="col-4"/>
+                    </option>
+                    <option value="col-6">
+                        <locale group="quiqqer/template-tabler" var="col-6"/>
+                    </option>
+                    <option value="col-8">
+                        <locale group="quiqqer/template-tabler" var="col-8"/>
+                    </option>
+                    <option value="col-10">
+                        <locale group="quiqqer/template-tabler" var="col-10"/>
+                    </option>
+                    <option value="col-12">
+                        <locale group="quiqqer/template-tabler" var="col-12"/>
+                    </option>
+                </setting>
+
+                <setting name="cardColWidthMobile">
+                    <locale group="quiqqer/template-tabler" var="cardColMobileWidth"/>
+
+                    <option value=""/>
+                    <option value="col-sm-4">
+                        <locale group="quiqqer/template-tabler" var="col-sm-4"/>
+                    </option>
+                    <option value="col-sm-6">
+                        <locale group="quiqqer/template-tabler" var="col-sm-6"/>
+                    </option>
+                    <option value="col-sm-8">
+                        <locale group="quiqqer/template-tabler" var="col-sm-8"/>
+                    </option>
+                    <option value="col-sm-10">
+                        <locale group="quiqqer/template-tabler" var="col-sm-10"/>
+                    </option>
+                    <option value="col-sm-12">
+                        <locale group="quiqqer/template-tabler" var="col-sm-12"/>
+                    </option>
+                </setting>
+            </settings>
+        </brick>
+
+
         <!-- defined areas in the template -->
         <templateAreas>
             <!-- global areas -->

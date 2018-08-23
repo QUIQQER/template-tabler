@@ -18,6 +18,7 @@
 
 
             <!-- login -->
+            {if $showProfile}
             <div class="d-flex order-lg-2 ml-auto">
                 {if $User->getId()}
                 <div class="dropdown">
@@ -54,6 +55,7 @@
                 </button>
                 {/if}
             </div>
+            {/if}
         </div>
     </div>
 </div>

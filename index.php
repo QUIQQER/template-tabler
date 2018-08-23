@@ -1,5 +1,7 @@
 <?php
 
+$Template->setAttribute('noConflict', true);
+
 /**
  * Logo
  */
@@ -40,56 +42,37 @@ switch ($Template->getLayoutType()) {
 }
 
 /**
- * Show Header
+ * Setting
  */
 
-$showHeader = false;
+$Engine->assign([
+    'showProfile'    => $Project->getConfig('templateTabler.settings.showProfile'),
+    'showSearch'     => $Project->getConfig('templateTabler.settings.showSearch'),
+    'showBreadcrumb' => $Project->getConfig('templateTabler.settings.showBreadcrumb'),
+
+    'showPageHeader' => true,
+    'showPageTitle'  => true, //$Site->getAttribute('templateTabler.showTitle'),
+    'showPageShort'  => true, //$Site->getAttribute('templateTabler.showShort'),
+
+]);
 
 
-switch ($Template->getLayoutType()) {
-    case 'layout/startPage':
-        $showHeader = $Project->getConfig('templateBusinessPro.settings.showHeaderStartPage');
-        break;
-
-    case 'layout/noSidebar':
-        $showHeader = $Project->getConfig('templateBusinessPro.settings.showHeaderNoSidebar');
-        break;
-
-    case 'layout/rightSidebar':
-        $showHeader = $Project->getConfig('templateBusinessPro.settings.showHeaderRightSidebar');
-        break;
-
-    case 'layout/leftSidebar':
-        $showHeader = $Project->getConfig('templateBusinessPro.settings.showHeaderLeftSidebar');
-        break;
-}
-
-/* site own show header */
-switch ($Site->getAttribute('templateBusinessPro.showEmotion')) {
-    case 'show':
-        $showHeader = true;
-        break;
-
-    case 'hide':
-        $showHeader = false;
-}
-
-
+/**
+ * Assigning
+ */
 $Engine->assign([
     'bodyClass' => $bodyClass,
     'avatar'    => $avatar,
 
-    'showHeader'    => $showHeader,
-    'showPageTitle' => $Site->getAttribute('templateBusinessPro.showTitle'),
-    'showPageShort' => $Site->getAttribute('templateBusinessPro.showShort'),
-
     'BricksManager' => QUI\Bricks\Manager::init(),
+    'Breadcrumb'    => new QUI\Controls\Breadcrumb(),
     'Start'         => $Project->firstChild()
 ]);
 
 
 // templates
 $Engine->assign([
-    'templateHeader' => $Engine->fetch(dirname(__FILE__).'/index.header.html'),
-    'templateMenu'   => $Engine->fetch(dirname(__FILE__).'/index.menu.html')
+    'templateHeader'     => $Engine->fetch(dirname(__FILE__).'/index.header.html'),
+    'templateBreadcrumb' => $Engine->fetch(dirname(__FILE__).'/index.breadcrumb.html'),
+    'templateMenu'       => $Engine->fetch(dirname(__FILE__).'/index.menu.html')
 ]);

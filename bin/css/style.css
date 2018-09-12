@@ -8,11 +8,11 @@ main.container {
 }
 
 .header-profile-login,
-.header-profile-menu {
+.header-profile-menu-button {
     height: 40px;
 }
 
-.header-profile-menu {
+.header-profile-menu-button {
     margin-left: 10px;
 }
 

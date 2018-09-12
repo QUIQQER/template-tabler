@@ -96,6 +96,16 @@
             <en><![CDATA[Brick area before the footer]]></en>
         </locale>
 
+        <locale name="copyright.text" html="true">
+            <de><![CDATA[
+            &copy; [year] - Template <em>Tabler</em> umgesetzt mit
+            <a href="https://www.quiqqer.de" target="_blank">QUIQQER</a> & <a href="https://github.com/tabler/tabler" target="_blank">Tabler</a>
+            ]]></de>
+            <en><![CDATA[
+            &copy; [year] - Theme <em>Tabler</em> created with
+            <a href="https://www.quiqqer.com" target="_blank">QUIQQER</a> & <a href="https://github.com/tabler/tabler" target="_blank">Tabler</a>
+            ]]></en>
+        </locale>
 
         <locale name="admin.layout.leftSidebar">
             <de><![CDATA[Linke Sidebar]]></de>

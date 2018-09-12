@@ -84,4 +84,14 @@ require(['MooTools'], function () {
             });
         });
     }
+
+    // mobile menu
+    document.getElement('.header-profile-menu').addEvent('click', function () {
+        var SlideNode = document.getElement('[data-qui="package/quiqqer/menu/bin/SlideOut"]'),
+            SlideOut  = QUI.Controls.getById(SlideNode.get('data-quiid'));
+
+        if (SlideOut) {
+            SlideOut.toggle();
+        }
+    });
 });

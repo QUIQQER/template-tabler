@@ -49,11 +49,11 @@ $Engine->assign([
     'showProfile'    => $Project->getConfig('templateTabler.settings.showProfile'),
     'showSearch'     => $Project->getConfig('templateTabler.settings.showSearch'),
     'showBreadcrumb' => $Project->getConfig('templateTabler.settings.showBreadcrumb'),
+    'Menu'           => new QUI\Menu\MegaMenu(),
 
     'showPageHeader' => true,
     'showPageTitle'  => true, //$Site->getAttribute('templateTabler.showTitle'),
     'showPageShort'  => true, //$Site->getAttribute('templateTabler.showShort'),
-
 ]);
 
 

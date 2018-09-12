@@ -7,8 +7,17 @@ main.container {
     padding-top: 5px;
 }
 
-.header-profile-login {
+.header-profile-login,
+.header-profile-menu {
     height: 40px;
+}
+
+.header-profile-menu {
+    margin-left: 10px;
+}
+
+.header-profile-login-menu-placeholder {
+    display: none;
 }
 
 .qui-window-popup {

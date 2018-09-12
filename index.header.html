@@ -8,15 +8,6 @@
                 {/if}
             </a>
 
-            <!--<a href="#" class="header-toggler d-lg-none order-lg-2 ml-auto collapsed"-->
-            <!--data-toggle="collapse"-->
-            <!--data-target="#headerMenuCollapse"-->
-            <!--aria-expanded="false"-->
-            <!--&gt;-->
-            <!--<span class="header-toggler-icon"></span>-->
-            <!--</a>-->
-
-
             <!-- login -->
             {if $showProfile}
             <div class="d-flex order-lg-2 ml-auto">
@@ -36,7 +27,8 @@
                             {/if}
                         </span>
                     </a>
-                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow header-profile-menu" x-placement="bottom-end"
+                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow header-profile-menu"
+                         x-placement="bottom-end"
                          style="position: absolute; transform: translate3d(-56px, 32px, 0px); top: 0; left: 0; will-change: transform;">
                         <a class="dropdown-item" href="#">
                             <i class="dropdown-icon fe fe-user"></i> Profile
@@ -51,9 +43,17 @@
                 </div>
                 {else}
                 <button class="header-profile-login btn btn-outline-primary">
-                    <i class="fe fe-log-in mr-2"></i> Login
+                    <i class="fe fe-log-in mr-2"></i> <span>Login</span>
                 </button>
                 {/if}
+
+                <button class="header-profile-menu btn btn-outline btn-outline-primary d-lg-none">
+                    <span class="fa fa-bars"></span>
+                </button>
+
+                <div class="header-profile-login-menu-placeholder">
+                    {$Menu->create()}
+                </div>
             </div>
             {/if}
         </div>

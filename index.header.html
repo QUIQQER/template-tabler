@@ -55,6 +55,16 @@
                     {$Menu->create()}
                 </div>
             </div>
+            {else}
+            <div class="d-flex order-lg-2 ml-auto">
+                <button class="header-profile-menu-button btn btn-outline btn-outline-primary d-lg-none">
+                    <span class="fa fa-bars"></span>
+                </button>
+
+                <div class="header-profile-login-menu-placeholder">
+                    {$Menu->create()}
+                </div>
+            </div>
             {/if}
         </div>
     </div>

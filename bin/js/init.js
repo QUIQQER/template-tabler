@@ -2,10 +2,6 @@
  * Load QUI
  */
 require(['MooTools'], function () {
-    // load QUI
-    require(['qui/QUI'], function (QUI) {
-    });
-
     // click dropdown workarounds
     var workaroundClickForMenus = function (event) {
         var Target = event.target;
@@ -86,9 +82,20 @@ require(['MooTools'], function () {
     }
 
     // mobile menu
+    var getSlideOut = function () {
+        var SlideNode = document.getElement(
+            '[data-qui="package/quiqqer/menu/bin/SlideOut"]'
+        );
+
+        return QUI.Controls.getById(SlideNode.get('data-quiid'));
+    };
+
+    require(['qui/QUI'], function (QUI) {
+        QUI.parse(document.body);
+    });
+
     document.getElement('.header-profile-menu-button').addEvent('click', function () {
-        var SlideNode = document.getElement('[data-qui="package/quiqqer/menu/bin/SlideOut"]'),
-            SlideOut  = QUI.Controls.getById(SlideNode.get('data-quiid'));
+        var SlideOut = getSlideOut();
 
         if (SlideOut) {
             SlideOut.toggle();

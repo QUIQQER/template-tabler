@@ -1,0 +1,70 @@
+{assign var=bricks value=$BricksManager->getBricksByArea('startpageContent', $Site)}
+{assign var=prefixContentBricks value=$BricksManager->getBricksByArea('prefixContentBricks', $Site)}
+{assign var=suffixContentBricks value=$BricksManager->getBricksByArea('suffixContentBricks', $Site)}
+
+{if !empty($prefixContentBricks)}
+{foreach from=$prefixContentBricks item=Brick}
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                {if $Brick->getAttribute('frontendTitle')}
+                <h2 class="brick-title mt-0 mb-4">{$Brick->getAttribute('frontendTitle')}</h2>
+                {/if}
+                {assign var=showTitle value=$Brick->setSetting('showTitle', false)}
+                {$Brick->create()}
+            </div>
+        </div>
+    </div>
+</div>
+{/foreach}
+{/if}
+
+{foreach from=$bricks item=Brick}
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                {if $Brick->getAttribute('frontendTitle')}
+                <h2 class="brick-title mt-0 mb-4">{$Brick->getAttribute('frontendTitle')}</h2>
+                {/if}
+                {assign var=showTitle value=$Brick->setSetting('showTitle', false)}
+                {$Brick->create()}
+            </div>
+        </div>
+    </div>
+</div>
+{/foreach}
+
+{if $Template->getBody() && $Template->getBody() !== ''}
+<!-- content -->
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="text-wrap">
+                    {$Template->getBody()}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{/if}
+
+{if !empty( $suffixContentBricks )}
+{foreach from=$suffixContentBricks item=Brick}
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                {if $Brick->getAttribute('frontendTitle')}
+                <h2 class="brick-title mt-0 mb-4">{$Brick->getAttribute('frontendTitle')}</h2>
+                {/if}
+                {assign var=showTitle value=$Brick->setSetting('showTitle', false)}
+                {$Brick->create()}
+            </div>
+        </div>
+    </div>
+</div>
+{/foreach}
+{/if}

@@ -107,6 +107,15 @@
             ]]></en>
         </locale>
 
+        <locale name="admin.layout.startpage">
+            <de><![CDATA[Landingpage (Startpage)]]></de>
+            <en><![CDATA[Landingpage]]></en>
+        </locale>
+        <locale name="admin.layout.startpage.description">
+            <de><![CDATA[Landingpage Layout - Geeignet für eine neue Landingpage oder Startseite]]></de>
+            <en><![CDATA[Landingpage Layout - Suitable for a new landingpage or home page]]></en>
+        </locale>
+
         <locale name="admin.layout.leftSidebar">
             <de><![CDATA[Linke Sidebar]]></de>
             <en><![CDATA[Left sidebar]]></en>

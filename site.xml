@@ -3,6 +3,16 @@
 
     <!-- layouts -->
     <layouts>
+        <layout type="layout/startPage"
+                image="bin/layouts/startPage.png">
+            <title>
+                <locale group="quiqqer/template-businesspro" var="admin.layout.startpage" />
+            </title>
+            <description>
+                <locale group="quiqqer/template-businesspro" var="admin.layout.startpage.desc" />
+            </description>
+        </layout>
+
         <layout type="layout/noSidebar"
                 image="bin/layouts/noSidebar.png">
             <title>

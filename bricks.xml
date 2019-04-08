@@ -107,12 +107,12 @@
                 <layout layout="layout/startPage">
                     <area name="prefixContentBricks" inheritance="1" priority="2">
                         <title>
-                            <locale group="quiqqer/template-businesspro"
+                            <locale group="quiqqer/template-tabler"
                                     var="area.sidebar.prefix.content.title"
                             />
                         </title>
                         <description>
-                            <locale group="quiqqer/template-businesspro"
+                            <locale group="quiqqer/template-tabler"
                                     var="area.sidebar.prefix.content.description"
                             />
                         </description>
@@ -120,12 +120,12 @@
 
                     <area name="suffixContentBricks" inheritance="1" priority="4">
                         <title>
-                            <locale group="quiqqer/template-businesspro"
+                            <locale group="quiqqer/template-tabler"
                                     var="area.sidebar.suffix.content.title"
                             />
                         </title>
                         <description>
-                            <locale group="quiqqer/template-businesspro"
+                            <locale group="quiqqer/template-tabler"
                                     var="area.sidebar.suffix.content.description"
                             />
                         </description>

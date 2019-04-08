@@ -6,10 +6,10 @@
         <layout type="layout/startPage"
                 image="bin/layouts/startPage.png">
             <title>
-                <locale group="quiqqer/template-businesspro" var="admin.layout.startpage" />
+                <locale group="quiqqer/template-tabler" var="admin.layout.startpage" />
             </title>
             <description>
-                <locale group="quiqqer/template-businesspro" var="admin.layout.startpage.desc" />
+                <locale group="quiqqer/template-tabler" var="admin.layout.startpage.desc" />
             </description>
         </layout>
 

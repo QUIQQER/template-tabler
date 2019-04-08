@@ -58,4 +58,11 @@ input:focus {
     width: 160px;
 }
 
+/** custom tabler stuff
+ ================================= */
 
+.card-loader {
+    height: 100%;
+    width: 100%;
+    position: absolute !important;
+}

@@ -2,18 +2,35 @@
 
 {if !empty($headerSuffix)}
 {foreach from=$headerSuffix item=Brick}
-<div class="row">
-    <div class="col-12">
-        <div class="card">
-            <div class="card-body">
-                {if $Brick->getAttribute('frontendTitle')}
-                <h2 class="brick-title mt-0 mb-4">{$Brick->getAttribute('frontendTitle')}</h2>
-                {/if}
-                {assign var=showTitle value=$Brick->setSetting('showTitle', false)}
-                {$Brick->create()}
+
+{if $Brick->getSetting('brickFullWidth') || true}
+<div class="row no-gutters">
+    <div class="w-100">
+{else}
+
+<div class="container">
+    <div class="row">
+        <div class="container-fluid">
+            <div class="card">
+                <div class="card-body">
+                    {/if}
+
+                    {if $Brick->getAttribute('frontendTitle')}
+                    <h2 class="brick-title mt-0 mb-4">{$Brick->getAttribute('frontendTitle')}</h2>
+                    {/if}
+                    {assign var=showTitle value=$Brick->setSetting('showTitle', false)}
+                    {$Brick->create()}
+
+{if $Brick->getSetting('brickFullWidth') || true}
+    </div>
+</div>
+{else}
+                </div>
             </div>
         </div>
     </div>
 </div>
+{/if}
+
 {/foreach}
 {/if}

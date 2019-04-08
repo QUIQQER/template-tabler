@@ -13,6 +13,14 @@
             <en><![CDATA[Tabler is free and open-source HTML Dashboard UI Kit built on Bootstrap 4.]]></en>
         </locale>
 
+        <locale name="brickFullWidth">
+            <de><![CDATA[Volle Breite]]></de>
+            <en><![CDATA[Full width]]></en>
+        </locale>
+        <locale name="noPadding">
+            <de><![CDATA[Kein Abstand von oben und unten]]></de>
+            <en><![CDATA[No space top and bottom]]></en>
+        </locale>
 
         <!-- areas -->
         <locale name="area.footer.title">

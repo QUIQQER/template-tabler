@@ -2,6 +2,18 @@
 <quiqqer>
     <bricks>
 
+        <!-- for all bricks -->
+        <brick control="*">
+            <settings>
+                <setting name="brickFullWidth" type="checkbox">
+                    <locale group="quiqqer/template-tabler" var="brickFullWidth"/>
+                </setting>
+                <setting name="noPadding" type="checkbox">
+                    <locale group="quiqqer/template-tabler" var="noPadding"/>
+                </setting>
+            </settings>
+        </brick>
+
         <!-- promo slider wallpaper 2 content -->
         <brick control="\QUI\Tabler\Bricks\Card">
             <title>

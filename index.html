@@ -26,7 +26,10 @@
 
         {$templateHeader}
         {$templateMenu}
+
+        {if $Site->getId() !== 1}
         {$templateBreadcrumb}
+        {/if}
 
         {fetch template="areas/headerSuffix.html" BricksManager=$BricksManager Site=$Site}
 

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <events>
     <event on="onRequest" fire="\QUI\Tabler\EventHandler::onRequest"/>
+    <event on="onSmartyInit" fire="\QUI\Tabler\EventHandler::onSmartyInit"/>
 </events>

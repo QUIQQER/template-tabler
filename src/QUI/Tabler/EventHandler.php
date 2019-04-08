@@ -67,4 +67,46 @@ class EventHandler
             exit;
         }
     }
+
+    /**
+     * Event : on smarty init
+     *
+     * @param \Smarty $Smarty - \Smarty
+     * @throws \Exception
+     */
+    public static function onSmartyInit($Smarty)
+    {
+        if (!isset($Smarty->registered_plugins['function']) ||
+            !isset($Smarty->registered_plugins['function']['fetch'])
+        ) {
+            $Smarty->registerPlugin(
+                "function",
+                "fetch",
+                "\\QUI\\Tabler\\EventHandler::fetch"
+            );
+        }
+    }
+
+    /**
+     * Helper to fetch templates
+     *
+     * @param $params
+     * @param $Smarty
+     * @return string
+     */
+    public static function fetch($params, $Smarty)
+    {
+        $template = $params['template'];
+        $path     = OPT_DIR.'quiqqer/template-tabler/';
+
+        try {
+            $Engine = QUI::getTemplateManager()->getEngine();
+        } catch (QUI\Exception $Exception) {
+            return '';
+        }
+
+        $Engine->assign($params);
+
+        return $Engine->fetch($path.$template);
+    }
 }

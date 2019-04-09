@@ -5,10 +5,9 @@
 {if !empty($prefixContentBricks)}
 {foreach from=$prefixContentBricks item=Brick}
 <div class="row">
-    <div class="col-12">
+    <div class="w-100">
         <div class="card">
             <div class="card-body">
-
                 {if $Brick->getAttribute('frontendTitle')}
                 <h2 class="brick-title mt-0 mb-4">{$Brick->getAttribute('frontendTitle')}</h2>
                 {/if}
@@ -23,7 +22,7 @@
 
 {foreach from=$bricks item=Brick}
 <div class="row">
-    <div class="col-12">
+    <div class="w-100">
         <div class="card">
             <div class="card-body">
                 {if $Brick->getAttribute('frontendTitle')}
@@ -40,7 +39,7 @@
 {if $Template->getBody() && $Template->getBody() !== ''}
 <!-- content -->
 <div class="row">
-    <div class="col-12">
+    <div class="w-100">
         <div class="card">
             <div class="card-body">
                 <div class="text-wrap">
@@ -55,7 +54,7 @@
 {if !empty( $suffixContentBricks )}
 {foreach from=$suffixContentBricks item=Brick}
 <div class="row">
-    <div class="col-12">
+    <div class="w-100">
         <div class="card">
             <div class="card-body">
                 {if $Brick->getAttribute('frontendTitle')}

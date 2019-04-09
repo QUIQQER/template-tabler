@@ -1,6 +1,8 @@
 Tabler Template for QUIQQER
 ------
 
+![](bin/images/readme.jpg)
+
 This Template is a ported version from Tabler for QUIQQER.
 
 Tabler is free and open-source HTML Dashboard UI Kit built on Bootstrap 4.

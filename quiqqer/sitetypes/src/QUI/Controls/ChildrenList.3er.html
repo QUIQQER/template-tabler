@@ -47,48 +47,45 @@
             </div>
 
             <footer class="card-footer">
-                {if $this->getAttribute('showCreator') || $this->getAttribute('showDate')}
-                <p class="qui-control-childrenlist-3er-entry-content-footer-authorDate">
 
-                    {if $this->getAttribute('showCreator')}
-                    <span class="qui-control-childrenlist-3er-entry-content-footer-author">
-                        {user id=$Child->getAttribute('c_user') var=User}
-                        <span class="fa fa-user"></span>
-                        {if $User->getId() && $User->getAttribute('firstname')}
-                            {$User->getAttribute('firstname')}
-                        {else if $User->getId()}
-                            {$User->getname()}
-                        {/if}
-                    </span>
+                {if $this->getAttribute('showCreator')}
+                <span>
+                    {user id=$Child->getAttribute('c_user') var=User}
+                    <span class="fa fa-user"></span>
+                    {if $User->getId() && $User->getAttribute('firstname')}
+                        {$User->getAttribute('firstname')}
+                    {else if $User->getId()}
+                        {$User->getname()}
                     {/if}
-
-                    {if $this->getAttribute('showDate')}
-                    <span class="qui-control-childrenlist-3er-entry-content-footer-date">
-                    {if $Child->getAttribute('release_from') &&
-                        $Child->getAttribute('release_from') != '0000-00-00 00:00:00'}
-                        <span class="fa fa-calendar"></span>
-                        <time datetime="{$Child->getAttribute('release_from')|date_format:'c'}" itemprop="datePublished">
-                            {locale_date date=$Child->getAttribute('release_from')}
-                        </time>
-                        {else}
-                        <time datetime="{$Child->getAttribute('c_date')|date_format:'c'}" itemprop="datePublished">
-                            {locale_date date=$Child->getAttribute('c_date')}
-                        </time>
-                        {/if}
-                    </span>
-                    {/if}
-
-                    {if $this->getAttribute('showTime')}
-                    <span class="qui-control-childrenlist-3er-entry-content-footer-time">
-                        <span class="fa fa-clock-o"></span>
-                        {$Child->getAttribute('release_from')|date_format:"%H:%M"}
-                    </span>
-                    {/if}
-                </p>
+                </span>
                 {/if}
+
+                {if $this->getAttribute('showDate')}
+                <span>
+                {if $Child->getAttribute('release_from') &&
+                    $Child->getAttribute('release_from') != '0000-00-00 00:00:00'}
+                    <span class="fa fa-calendar"></span>
+                    <time datetime="{$Child->getAttribute('release_from')|date_format:'c'}" itemprop="datePublished">
+                        {locale_date date=$Child->getAttribute('release_from')}
+                    </time>
+                    {else}
+                    <time datetime="{$Child->getAttribute('c_date')|date_format:'c'}" itemprop="datePublished">
+                        {locale_date date=$Child->getAttribute('c_date')}
+                    </time>
+                    {/if}
+                </span>
+                {/if}
+
+                {if $this->getAttribute('showTime')}
+                <span class="qui-control-childrenlist-3er-entry-content-footer-time">
+                    <span class="fa fa-clock-o"></span>
+                    {$Child->getAttribute('release_from')|date_format:"%H:%M"}
+                </span>
+                {/if}
+
                 <a href="{url site=$Child}"
                    title="{$Child->getAttribute('title')|escape:'html'}"
-                   class="qui-control-childrenlist-3er-entry-content-footer-button button"
+                   class="btn btn-sm btn-link float-right"
                 >
                     {locale group="quiqqer/sitetypes" value="list.icons.more"}
                 </a>

@@ -152,7 +152,93 @@
                     </attributes>
                 </style>
 
+                <style element="a,button">
+                    <locale group="quiqqer/template-tabler" var="template.button.blue"/>
+                    <attributes>
+                        <attribute name="class">btn btn-blue</attribute>
+                    </attributes>
+                </style>
+
+                <style element="a,button">
+                    <locale group="quiqqer/template-tabler" var="template.button.azure"/>
+                    <attributes>
+                        <attribute name="class">btn btn-azure</attribute>
+                    </attributes>
+                </style>
+                <style element="a,button">
+                    <locale group="quiqqer/template-tabler" var="template.button.indigo"/>
+                    <attributes>
+                        <attribute name="class">btn btn-indigo</attribute>
+                    </attributes>
+                </style>
+                <style element="a,button">
+                    <locale group="quiqqer/template-tabler" var="template.button.purple"/>
+                    <attributes>
+                        <attribute name="class">btn btn-purple</attribute>
+                    </attributes>
+                </style>
+                <style element="a,button">
+                    <locale group="quiqqer/template-tabler" var="template.button.pink"/>
+                    <attributes>
+                        <attribute name="class">btn btn-pink</attribute>
+                    </attributes>
+                </style>
+                <style element="a,button">
+                    <locale group="quiqqer/template-tabler" var="template.button.red"/>
+                    <attributes>
+                        <attribute name="class">btn btn-red</attribute>
+                    </attributes>
+                </style>
+                <style element="a,button">
+                    <locale group="quiqqer/template-tabler" var="template.button.orange"/>
+                    <attributes>
+                        <attribute name="class">btn btn-orange</attribute>
+                    </attributes>
+                </style>
+                <style element="a,button">
+                    <locale group="quiqqer/template-tabler" var="template.button.yellow"/>
+                    <attributes>
+                        <attribute name="class">btn btn-yellow</attribute>
+                    </attributes>
+                </style>
+                <style element="a,button">
+                    <locale group="quiqqer/template-tabler" var="template.button.lime"/>
+                    <attributes>
+                        <attribute name="class">btn btn-lime</attribute>
+                    </attributes>
+                </style>
+                <style element="a,button">
+                    <locale group="quiqqer/template-tabler" var="template.button.green"/>
+                    <attributes>
+                        <attribute name="class">btn btn-green</attribute>
+                    </attributes>
+                </style>
+                <style element="a,button">
+                    <locale group="quiqqer/template-tabler" var="template.button.teal"/>
+                    <attributes>
+                        <attribute name="class">btn btn-teal</attribute>
+                    </attributes>
+                </style>
+                <style element="a,button">
+                    <locale group="quiqqer/template-tabler" var="template.button.cyan"/>
+                    <attributes>
+                        <attribute name="class">btn btn-cyan</attribute>
+                    </attributes>
+                </style>
+                <style element="a,button">
+                    <locale group="quiqqer/template-tabler" var="template.button.gray"/>
+                    <attributes>
+                        <attribute name="class">btn btn-gray</attribute>
+                    </attributes>
+                </style>
+                <style element="a,button">
+                    <locale group="quiqqer/template-tabler" var="template.button.gray.gray"/>
+                    <attributes>
+                        <attribute name="class">btn btn-gray-gray</attribute>
+                    </attributes>
+                </style>
             </styles>
+
         </wysiwyg>
     </project>
 </quiqqer>

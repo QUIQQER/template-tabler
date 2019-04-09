@@ -154,5 +154,112 @@
         </locale>
 
 
+        <locale name="template.message.alert">
+            <de><![CDATA[]]></de>
+            <en><![CDATA[Primary alert]]></en>
+        </locale>
+        <locale name="template.message.secondary">
+            <de><![CDATA[]]></de>
+            <en><![CDATA[Secondary alert]]></en>
+        </locale>
+        <locale name="template.message.success">
+            <de><![CDATA[]]></de>
+            <en><![CDATA[Success alert]]></en>
+        </locale>
+        <locale name="template.message.info">
+            <de><![CDATA[]]></de>
+            <en><![CDATA[Info alert]]></en>
+        </locale>
+        <locale name="template.message.warning">
+            <de><![CDATA[]]></de>
+            <en><![CDATA[Warning alert]]></en>
+        </locale>
+        <locale name="template.message.danger">
+            <de><![CDATA[]]></de>
+            <en><![CDATA[Danger alert]]></en>
+        </locale>
+
+
+        <locale name="template.button.primary">
+            <de><![CDATA[Button Primary]]></de>
+            <en><![CDATA[Primary button]]></en>
+        </locale>
+        <locale name="template.button.secondary">
+            <de><![CDATA[Button Secondary]]></de>
+            <en><![CDATA[Secondary button]]></en>
+        </locale>
+        <locale name="template.button.info">
+            <de><![CDATA[Button Info]]></de>
+            <en><![CDATA[Info button]]></en>
+        </locale>
+        <locale name="template.button.warning">
+            <de><![CDATA[Button Warnung]]></de>
+            <en><![CDATA[Warning button]]></en>
+        </locale>
+        <locale name="template.button.danger">
+            <de><![CDATA[Button Danger]]></de>
+            <en><![CDATA[Danger button]]></en>
+        </locale>
+        <locale name="template.button.link">
+            <de><![CDATA[Button Link]]></de>
+            <en><![CDATA[Link button]]></en>
+        </locale>
+        <locale name="template.button.blue">
+            <de><![CDATA[Button Blau]]></de>
+            <en><![CDATA[Blue button]]></en>
+        </locale>
+        <locale name="template.button.azure">
+            <de><![CDATA[Button Azure]]></de>
+            <en><![CDATA[Azure button]]></en>
+        </locale>
+        <locale name="template.button.indigo">
+            <de><![CDATA[Button Indigo]]></de>
+            <en><![CDATA[Indigo button]]></en>
+        </locale>
+        <locale name="template.button.purple">
+            <de><![CDATA[Button Lila]]></de>
+            <en><![CDATA[Purble button]]></en>
+        </locale>
+        <locale name="template.button.pink">
+            <de><![CDATA[Button Pink]]></de>
+            <en><![CDATA[Pink button]]></en>
+        </locale>
+        <locale name="template.button.red">
+            <de><![CDATA[Button Rot]]></de>
+            <en><![CDATA[Red button]]></en>
+        </locale>
+        <locale name="template.button.orange">
+            <de><![CDATA[Button Orange]]></de>
+            <en><![CDATA[Orange button]]></en>
+        </locale>
+        <locale name="template.button.yellow">
+            <de><![CDATA[Button Gelb]]></de>
+            <en><![CDATA[Yellow button]]></en>
+        </locale>
+        <locale name="template.button.lime">
+            <de><![CDATA[Button Limette]]></de>
+            <en><![CDATA[Lime button]]></en>
+        </locale>
+        <locale name="template.button.green">
+            <de><![CDATA[Button Grün]]></de>
+            <en><![CDATA[Green button]]></en>
+        </locale>
+        <locale name="template.button.teal">
+            <de><![CDATA[Button Blaugrün]]></de>
+            <en><![CDATA[Teal button]]></en>
+        </locale>
+        <locale name="template.button.cyan">
+            <de><![CDATA[Button Cyan]]></de>
+            <en><![CDATA[Cyan button]]></en>
+        </locale>
+        <locale name="template.button.gray">
+            <de><![CDATA[Button Grau]]></de>
+            <en><![CDATA[Gray button]]></en>
+        </locale>
+        <locale name="template.button.gray.gray">
+            <de><![CDATA[Button Dunkel grau]]></de>
+            <en><![CDATA[Dark Gray button]]></en>
+        </locale>
+
     </groups>
 </locales>

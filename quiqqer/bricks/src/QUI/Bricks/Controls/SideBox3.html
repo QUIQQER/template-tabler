@@ -1,0 +1,46 @@
+
+<div class="container">
+    <div class="row row-cards row-deck">
+        {foreach from=$children item=Child key=key}
+        <article class="col-md-6 col-lg-4 quiqqer-bricks-sidebox3-article">
+            <div class="card">
+                {if $this->getAttribute('showImage')}
+                <a href="{url site=$Child}" class="image p-3">
+                    {image src=$Child->getAttribute('image_site') width=640}
+                </a>
+                {/if}
+
+                {if $this->getAttribute('showTitle')}
+                <header class="card-header">
+                    <h3>
+                        <a href="{url site=$Child}">
+                            {$Child->getAttribute('title')}
+                        </a>
+                    </h3>
+                </header>
+                {/if}
+
+                {if $this->getAttribute('showShort') || $this->getAttribute('showContent')}
+                <div class="card-body">
+                    {if $this->getAttribute('showShort')}
+                    <p>
+                        {text_passage text=$Child->getAttribute('short') start=0 end=120 striphtml=true append="..."}
+                    </p>
+                    {/if}
+
+                    {if $this->getAttribute('showContent')}
+                        {$Child->getAttribute('content')}
+                    {/if}
+                </div>
+                {/if}
+
+                <footer class="card-footer article-button">
+                    <a href="{url site=$Child}" class="button">
+                        {locale group="quiqqer/bricks" var="continue.reading"}
+                    </a>
+                </footer>
+            </div>
+        </article>
+        {/foreach}
+    </div>
+</div>

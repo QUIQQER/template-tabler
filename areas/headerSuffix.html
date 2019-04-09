@@ -1,36 +1,35 @@
 {assign var=headerSuffix value=$BricksManager->getBricksByArea('headerSuffix', $Site)}
 
 {if !empty($headerSuffix)}
-{foreach from=$headerSuffix item=Brick}
+    {foreach from=$headerSuffix item=Brick}
 
-{if $Brick->getSetting('brickFullWidth') || true}
-<div class="row no-gutters">
-    <div class="w-100">
-{else}
+    {if $Brick->getSetting('brickFullWidth')}
+    <div class="row no-gutters">
+        <div class="w-100">
+    {else}
+    <div class="container">
+        <div class="row">
+            <div class="w-100">
+    {/if}
 
-<div class="container">
-    <div class="row">
-        <div class="container-fluid">
-            <div class="card">
-                <div class="card-body">
-                    {/if}
+            {if $Brick->getAttribute('frontendTitle')}
+                <header class="control-header">
+                    <h2 class="page-title brick-title pt-4 pl-3">
+                        {$Brick->getAttribute('frontendTitle')}
+                    </h2>
+                </header>
+            {/if}
+            {assign var=showTitle value=$Brick->setSetting('showTitle', false)}
+            {$Brick->create()}
 
-                    {if $Brick->getAttribute('frontendTitle')}
-                    <h2 class="brick-title mt-0 mb-4">{$Brick->getAttribute('frontendTitle')}</h2>
-                    {/if}
-                    {assign var=showTitle value=$Brick->setSetting('showTitle', false)}
-                    {$Brick->create()}
-
-{if $Brick->getSetting('brickFullWidth') || true}
+    {if $Brick->getSetting('brickFullWidth')}
+        </div>
     </div>
-</div>
-{else}
-                </div>
+    {else}
             </div>
         </div>
     </div>
-</div>
-{/if}
+    {/if}
 
-{/foreach}
+    {/foreach}
 {/if}

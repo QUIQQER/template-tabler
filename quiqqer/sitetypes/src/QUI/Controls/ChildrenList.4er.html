@@ -1,0 +1,104 @@
+
+{assign var=Placeholder value=$Project->getMedia()->getPlaceholderImage()}
+
+<section itemscope itemtype="{$this->getAttribute('itemtype')}" class="row">
+    <link property="mainEntityOfPage" href="{url site=$Site}">
+
+    {assign var=counter value=1}
+    {foreach from=$children item=Child key=key}
+    {assign var=_Child value=$Child->load()}
+    <article itemscope
+             itemprop="itemListElement"
+             itemtype="{$this->getAttribute('child-itemtype')}"
+             class="col-md-3"
+    >
+        <div class="card">
+            <meta itemprop="position" content="{$counter}" />
+            {assign var=counter value=$counter+1}
+
+            <!-- entry image -->
+            {if $this->getAttribute('showImages')}
+            <a href="{url site=$Child}" class="image p-3 text-center">
+                {image src=$Child->getAttribute('image_site') width="640" title="{$Child->getAttribute('title')|escape:"html"}"}
+            </a>
+            {/if}
+
+            {if $this->getAttribute('showHeader')}
+            <header class="card-header">
+                <h1 itemprop="name">
+                    <a itemprop="url" href="{url site=$Child}"
+                       title="{$Child->getAttribute('title')|escape:'html'}"
+                       class="qui-control-childrenlist-4er-entry-content-headerLink">
+                        {$Child->getAttribute('title')}
+                    </a>
+                </h1>
+            </header>
+            {/if}
+
+            <!-- entry content -->
+            <div class="card-body">
+                {if $this->getAttribute('showShort')}
+                <p class="qui-control-childrenlist-4er-entry-content-short">
+                    {$Child->getAttribute('short')|nl2br}
+                </p>
+                {/if}
+            </div>
+
+            <footer class="card-footer">
+                {if $this->getAttribute('showCreator') || $this->getAttribute('showDate')}
+                <p class="qui-control-childrenlist-4er-entry-content-footer-authorDate">
+
+                    {if $this->getAttribute('showCreator')}
+                    <span class="qui-control-childrenlist-4er-entry-content-footer-author">
+                        {user id=$Child->getAttribute('c_user') var=User}
+                        <span class="fa fa-user"></span>
+                        {if $User->getId() && $User->getAttribute('firstname')}
+                            {$User->getAttribute('firstname')}
+                        {else if $User->getId()}
+                            {$User->getname()}
+                        {/if}
+                    </span>
+                    {/if}
+
+                    {if $this->getAttribute('showDate')}
+                    <span class="qui-control-childrenlist-4er-entry-content-footer-date">
+                        {if $Child->getAttribute('release_from') &&
+                            $Child->getAttribute('release_from') != '0000-00-00 00:00:00'}
+                            <span class="fa fa-calendar"></span>
+                            <time datetime="{$Child->getAttribute('release_from')|date_format:'c'}"
+                            itemprop="datePublished">
+                                {locale_date date=$Child->getAttribute('release_from')}
+                            </time>
+                        {else}
+                            <time datetime="{$Child->getAttribute('c_date')|date_format:'c'}"
+                            itemprop="datePublished">
+                                {locale_date date=$Child->getAttribute('c_date')}
+                            </time>
+                        {/if}
+                    </span>
+                    {/if}
+
+                    {if $this->getAttribute('showTime')}
+                    <span class="qui-control-childrenlist-4er-entry-content-footer-time">
+                            <span class="fa fa-clock-o"></span>
+                            {$Child->getAttribute('release_from')|date_format:"%H:%M"}
+                        </span>
+                    {/if}
+                </p>
+                {/if}
+                <a href="{url site=$Child}"
+                   title="{$Child->getAttribute('title')|escape:'html'}"
+                   class="qui-control-childrenlist-4er-entry-content-footer-button button">
+                    {locale group="quiqqer/sitetypes" value="list.icons.more"}
+                </a>
+            </footer>
+
+        </div>
+    </article>
+
+    {/foreach}
+</section>
+
+{if $this->getAttribute('showSheets') && $sheets > 1}
+{$Pagination->create()}
+{/if}

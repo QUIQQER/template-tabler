@@ -69,14 +69,8 @@ require(['MooTools'], function () {
         Login.addEvent('click', function (event) {
             event.stop();
 
-            require(['controls/users/LoginWindow'], function (LoginWindow) {
-                new LoginWindow({
-                    events: {
-                        onLoad: function () {
-                            console.log(123);
-                        }
-                    }
-                }).open();
+            require(['package/quiqqer/frontend-users/bin/frontend/controls/login/Window'], function (LoginWindow) {
+                new LoginWindow().open();
             });
         });
     }

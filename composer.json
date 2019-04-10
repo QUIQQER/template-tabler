@@ -21,6 +21,7 @@
     "quiqqer\/quiqqer": "1.*|dev-master|dev-dev",
     "quiqqer/sitetypes": "1.*|dev-master|dev-dev",
     "quiqqer/menu": "1.*|dev-master|dev-dev",
+    "quiqqer/frontend-users": "1.*|dev-master|dev-dev",
     "tabler/tabler": "*",
     "npm-asset/fastclick": "1.*"
   },

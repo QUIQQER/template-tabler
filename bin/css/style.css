@@ -58,6 +58,10 @@ input:focus {
     width: 160px;
 }
 
+.fa-close:before {
+    content: '\00d7';
+}
+
 /** custom tabler stuff
  ================================= */
 

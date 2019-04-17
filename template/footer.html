@@ -1,9 +1,8 @@
 <footer class="footer">
     <div class="container">
+        {fetch template="areas/footer.html" BricksManager=$BricksManager Site=$Site}
 
         <div class="row align-items-center flex-row-reverse">
-            {fetch template="areas/footer.html" BricksManager=$BricksManager Site=$Site}
-
             <div class="col-12 col-lg-auto mt-3 mt-lg-0 text-center">
                 {locale group="quiqqer/template-tabler" var="copyright.text" year=$smarty.now|date_format:'%Y'}
             </div>

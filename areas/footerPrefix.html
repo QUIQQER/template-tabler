@@ -1,0 +1,35 @@
+{assign var=headerSuffix value=$BricksManager->getBricksByArea('footerPrefix', $Site)}
+
+{if !empty($headerSuffix)}
+    {foreach from=$headerSuffix item=Brick}
+
+    {if $Brick->getSetting('brickFullWidth')}
+    <div class="row no-gutters">
+        <div class="w-100">
+    {else}
+    <div class="container">
+        <div class="row">
+            <div class="w-100">
+    {/if}
+
+            {if $Brick->getAttribute('frontendTitle')}
+                <header class="control-header">
+                    <h2 class="page-title brick-title pt-4 pb-4 pl-3">
+                        {$Brick->getAttribute('frontendTitle')}
+                    </h2>
+                </header>
+            {/if}
+            {assign var=showTitle value=$Brick->setSetting('showTitle', false)}
+            {$Brick->create()}
+
+    {if $Brick->getSetting('brickFullWidth')}
+        </div>
+    </div>
+    {else}
+            </div>
+        </div>
+    </div>
+    {/if}
+
+    {/foreach}
+{/if}

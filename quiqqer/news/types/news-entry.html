@@ -1,0 +1,102 @@
+{if $Site->getAttribute('release_from') &&
+$Site->getAttribute('release_from') != '0000-00-00 00:00:00'}
+{assign var=date value=$Site->getAttribute('release_from')}
+{else}
+{assign var=date value=$Site->getAttribute('c_date')}
+{/if}
+
+<article class="content-body" itemscope itemtype="http://schema.org/NewsArticle">
+    {if $enableDateAndCreator}
+    <section class="card">
+        <div class="card-body">
+            {if $showCreator}
+            {user id=$Site->getAttribute('c_user') var=User}
+            {t}quiqqer/news entry.news.by{/t}
+            <span class="news-entry-author">
+                {if $User->getId() && $User->getAttribute('firstname')}
+                    {$User->getAttribute('firstname')}
+                {else if $User->getId()}
+                    {$User->getname()}
+                {/if}
+            </span>
+            {/if}
+
+            {if $showDate}
+            <span class="news-entry-time">
+                {t}quiqqer/news entry.news.on{/t}
+                <time datetime="{$date|date_format:'c'}" itemprop="datePublished">
+                    {locale_date date=$date}
+                </time>
+            </span>
+            {/if}
+        </div>
+    </section>
+    {/if}
+
+    {if $Site->getAttribute('content')}
+    <section class="card" itemprop="articleBody">
+        <div class="card-body">
+            {$Site->getAttribute('content')}
+        </div>
+    </section>
+    {/if}
+
+    <section class="card">
+        <div class="card-body">
+            <div class="news-entry-nav-title">
+                {t}quiqqer/news entry.news.nav.title{/t}
+            </div>
+            <ol class="news-entry-nav-list">
+                {foreach from=$previousSiblings item=prevSibling}
+                <li>
+                    <a href="{url site=$prevSibling}"
+                       title="{$prevSibling->getAttribute('title')|escape:'html'}"
+                    >
+                        <i class="fa fa-angle-right news-entry-nav-bullet"></i>
+                        {if $showFurtherNewsDate}
+                        {locale_date date=$prevSibling->getAttribute('release_from')} –
+                        {/if}
+
+                        {if $showFurtherNewsTime}
+                        {$prevSibling->getAttribute('release_from')|date_format:"%H:%M"}:
+                        {/if}
+
+                        {$prevSibling->getAttribute('title')}
+                    </a>
+                </li>
+                {/foreach}
+
+                <li class="news-entry-nav-active">
+                    <i class="fa fa-angle-right news-entry-nav-bullet"></i>
+                    {if $showFurtherNewsDate}
+                    {locale_date date=$Site->getAttribute('release_from')} –
+                    {/if}
+
+                    {if $showFurtherNewsTime}
+                    {$Site->getAttribute('release_from')|date_format:"%H:%M"}:
+                    {/if}
+
+                    {$Site->getAttribute('title')}
+                </li>
+
+                {foreach from=$nextSiblings item=nextSibling}
+                <li>
+                    <a href="{url site=$nextSibling}" title="{$nextSibling->getAttribute('title')|escape:'html'}">
+                        <i class="fa fa-angle-right news-entry-nav-bullet"></i>
+                        {if $showFurtherNewsDate}
+                        {locale_date date=$nextSibling->getAttribute('release_from')} –
+                        {/if}
+
+                        {if $showFurtherNewsTime}
+                        {$nextSibling->getAttribute('release_from')|date_format:"%H:%M"}:
+                        {/if}
+
+                        {$nextSibling->getAttribute('title')}
+                    </a>
+                </li>
+                {/foreach}
+            </ol>
+        </div>
+    </section>
+
+</article>

@@ -40,6 +40,10 @@ main.container {
     content: '\00d7';
 }
 
+.page,
+.slideout-panel {
+    min-height: 100vh !important;
+}
 
 /** default nodes
  ================================= */

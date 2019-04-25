@@ -13,6 +13,28 @@
             <en><![CDATA[Tabler is free and open-source HTML Dashboard UI Kit built on Bootstrap 4.]]></en>
         </locale>
 
+        <locale name="templateTabler.settings.menu.title">
+            <de><![CDATA[Template Tabler Einstellungen]]></de>
+            <en><![CDATA[Template Tabler Settings]]></en>
+        </locale>
+
+        <locale name="templateTabler.settings.title">
+            <de><![CDATA[Allgemeine Einstellungen]]></de>
+            <en><![CDATA[General settings]]></en>
+        </locale>
+        <locale name="showSearch.text">
+            <de><![CDATA[Suche anzeigen]]></de>
+            <en><![CDATA[Show search]]></en>
+        </locale>
+        <locale name="showProfile.text">
+            <de><![CDATA[Profile anzeigen]]></de>
+            <en><![CDATA[Show ürofile]]></en>
+        </locale>
+        <locale name="showBreadcrumb.text">
+            <de><![CDATA[Breadcrumb anzeigen]]></de>
+            <en><![CDATA[Show breadcrumb]]></en>
+        </locale>
+
         <locale name="brickFullWidth">
             <de><![CDATA[Volle Breite]]></de>
             <en><![CDATA[Full width]]></en>

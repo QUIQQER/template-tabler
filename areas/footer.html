@@ -1,7 +1,7 @@
 {assign var=footer value=$BricksManager->getBricksByArea('footer', $Site)}
 {if !empty($footer)}
 <div class="col-auto ml-lg-auto">
-    <div class="row align-items-center">
+    <div class="row">
         {foreach from=$footer item=Brick}
         {$Brick->create()}
         {/foreach}

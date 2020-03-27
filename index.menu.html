@@ -26,16 +26,21 @@
                 {assign var=navigation value=$Start->getNavigation()}
                 <ul class="nav nav-tabs border-0 flex-column flex-lg-row">
                     <li class="nav-item">
-                        <a href="./" class="nav-link active">
+                        <a href="./" class="nav-link{if $Site->getId() === 1} active{/if}">
                             <i class="fe fe-home"></i> Home
                         </a>
                     </li>
                     {foreach $navigation as $Child}
                     <li class="nav-item">
+                        {assign var=active value=""}
+                        {if $Rewrite->isIdInPath($Child->getId())}
+                        {assign var=active value=" active"}
+                        {/if}
+
                         {if $Child->hasChildren()}
-                        <a href="{url site=$Child}" class="nav-link" data-toggle="dropdown">
+                        <a href="{url site=$Child}" class="nav-link{$active}" data-toggle="dropdown">
                         {else}
-                        <a href="{url site=$Child}" class="nav-link">
+                        <a href="{url site=$Child}" class="nav-link{$active}">
                         {/if}
                             {if $Child->getAttribute('image_site')}<i class="{$Child->getAttribute('image_site')}"></i>{/if}
                             {$Child->getAttribute('title')}

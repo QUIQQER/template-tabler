@@ -11,8 +11,8 @@
         <image src="URL_OPT_DIR/quiqqer/template-tabler/bin/images/Logo.png"/>
 
         <preview>
-            <image src="URL_OPT_DIR/quiqqer/template-tabler/bin/img/preview/preview1.jpg"/>
-            <image src="URL_OPT_DIR/quiqqer/template-tabler/bin/img/preview/preview2.jpg"/>
+            <image src="URL_OPT_DIR/quiqqer/template-tabler/bin/images/preview/preview1.jpg"/>
+            <image src="URL_OPT_DIR/quiqqer/template-tabler/bin/images/preview/preview2.jpg"/>
         </preview>
 
         <support>
